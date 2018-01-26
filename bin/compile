@@ -53,6 +53,7 @@ tar -zxvf leptonica-1.73.tar.gz
 cd leptonica-1.73
 ./configure
 make
+make install
 cd ..
 apt-get $APT_OPTIONS -y --force-yes -d install --reinstall tesseract-ocr libpng-dev libjpeg-dev libtiff-dev zlib1g-dev | indent
 
