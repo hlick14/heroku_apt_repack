@@ -48,9 +48,11 @@ for PACKAGE in $(cat $BUILD_DIR/Aptfile); do
     apt-get $APT_OPTIONS -y --force-yes -d install --reinstall $PACKAGE | indent
   fi
 done
-wget http://www.leptonica.org/source/leptonica-1.73.tar.gz
-tar -zxvf leptonica-1.73.tar.gz
-cd leptonica-1.73
+wget http://www.leptonica.org/source/leptonica-1.71.tar.gz
+tar -zxvf leptonica-1.71.tar.gz
+cd leptonica-1.71
+topic "CONFIGURE AND INSTALL LEPTONICA"
+
 ./configure
 make
 make install
